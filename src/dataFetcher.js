@@ -1,6 +1,6 @@
 import { renderPost } from './postGrid.js';
 
-const sheetUrl = 'https://docs.google.com/spreadsheets/d/1K18fZekG_lEBUDaVUO0-KrKoh5RG3O34O3q5CsVb_vA/gviz/tq?headers=1&tqx=out:json';
+const sheetUrl = 'https://docs.google.com/spreadsheets/d/1G_HLaYS4lSJJTIMWktQF4NtR9abhaKR5dcCxVYWlDW0/tq?headers=1&tqx=out:json';
 const loader = document.getElementById('loader');
 const noMoreDataContainer = document.getElementById('noMoreData');
 let nextPageToken = null;
