@@ -4,14 +4,14 @@ export function renderHeader() {
   
     const profilePicture = document.createElement('img');
     profilePicture.className = 'w-16 h-16 rounded-full mr-4';
-    profilePicture.src = 'https://picsum.photos/200';
-    profilePicture.alt = 'Profile Picture';
+    profilePicture.src = 'https://lh3.googleusercontent.com/d/1MGKZjUtrZvEwnuVSiAEom4Bvf-RZJANi=w1000?authuser=0';
+    profilePicture.alt = 'amazng.store';
   
     const headerDetails = document.createElement('div');
   
     const username = document.createElement('h1');
     username.className = 'text-2xl font-bold';
-    username.textContent = 'Username header';
+    username.textContent = 'amazng.store';
   
     const stats = document.createElement('div');
     stats.className = 'flex items-center mb-2';
@@ -33,7 +33,7 @@ export function renderHeader() {
   
     const bio = document.createElement('p');
     bio.className = 'text-gray-600 mb-2';
-    bio.textContent = 'Bio goes here';
+    bio.textContent = '💡 Ingeniosos Productos ⭐ Calidad 🏡 Para el hogar 🔗https://www.tiktok.com/@amazng.store';
   
     const editProfileButton = document.createElement('a');
     editProfileButton.href = '#';
