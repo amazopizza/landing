@@ -2,7 +2,6 @@ import { renderPost } from './postGrid.js';
 
 const sheetUrl = 'https://docs.google.com/spreadsheets/d/1G_HLaYS4lSJJTIMWktQF4NtR9abhaKR5dcCxVYWlDW0/gviz/tq?headers=1&tqx=out:json';
 const loader = document.getElementById('loader');
-const noMoreDataContainer = document.getElementById('noMoreData');
 let nextPageToken = null;
 let hasMoreData = true;
 
@@ -42,9 +41,6 @@ export function fetchData(pageToken = null) {
       })
       
       loader.classList.add('hidden');
-      if (!hasMoreData) {
-        noMoreDataContainer.classList.remove('hidden');
-      }
     })
     .catch(error => {
         if (error instanceof TypeError) {

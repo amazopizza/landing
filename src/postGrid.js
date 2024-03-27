@@ -1,5 +1,4 @@
 export function renderPostGrid() {
-    
     const container = document.querySelector('.container');
 
     const postGridContainer = document.createElement("div");
@@ -8,7 +7,6 @@ export function renderPostGrid() {
     postGridContainer.className = "grid grid-cols-3 gap-4";
 
     container.appendChild(postGridContainer);
-    // ... (code to create and append post grid elements) ...
   }
   
   export function renderPost(postData) {
@@ -21,16 +19,6 @@ export function renderPostGrid() {
   
     const postHeader = document.createElement('div');
     postHeader.className = 'post-header';
-  
-    // const postAuthorPicture = document.createElement('img');
-    // postAuthorPicture.src = 'https://picsum.photos/200';
-    // postAuthorPicture.alt = 'Post Author';
-  
-    // const postAuthorUsername = document.createElement('span');
-    // postAuthorUsername.textContent = 'Username postGrid';
-  
-    // postHeader.appendChild(postAuthorPicture);
-    // postHeader.appendChild(postAuthorUsername);
   
     const postImage = document.createElement('a');
     postImage.href = link || '#';
