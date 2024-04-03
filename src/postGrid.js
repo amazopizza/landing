@@ -13,79 +13,22 @@ export function renderPostGrid() {
     const { thumbnail, caption, link } = postData;
 
     const postGridContainer = document.getElementById('postGrid');
-  
-    const postElement = document.createElement('div');
-    postElement.className = 'post rounded border border-grey-200 p-2';
-  
-    const postHeader = document.createElement('div');
-    postHeader.className = 'post-header';
-  
-    const postImage = document.createElement('a');
-    postImage.href = link || '#';
-    postImage.target = '_blank';
+    
+    const postElement = document.createElement('a');
+    postElement.href = link || '#';
+    postElement.target = '_blank';
+    postElement.className = 'post rounded border border-grey-100 p-2';
   
     const postThumbnail = document.createElement('img');
     postThumbnail.src = thumbnail;
     postThumbnail.alt = 'Post Thumbnail';
   
-    postImage.appendChild(postThumbnail);
-  
     const postOverlay = document.createElement('div');
-    postOverlay.className = 'post-overlay';
-  
-    const postOverlayContent = document.createElement('div');
-  
-    // const postLikes = document.createElement('span');
-    // postLikes.innerHTML = '<i class="far fa-heart mr-2"></i> 123 likes';
-  
-    // const postComments = document.createElement('span');
-    // postComments.innerHTML = '<i class="far fa-comment mr-2"></i> View all 10 comments';
-  
-    // postOverlayContent.appendChild(postLikes);
-    // postOverlayContent.appendChild(document.createElement('br'));
-    // postOverlayContent.appendChild(postComments);
-  
-    postOverlay.appendChild(postOverlayContent);
-  
-    // const postFooter = document.createElement('div');
-    // postFooter.className = 'post-footer';
-  
-    // const likeIcon = document.createElement('i');
-    // likeIcon.className = 'far fa-heart';
-  
-    // const commentIcon = document.createElement('i');
-    // commentIcon.className = 'far fa-comment';
-  
-    // const shareIcon = document.createElement('i');
-    // shareIcon.className = 'far fa-paper-plane';
-  
-    // const bookmarkIcon = document.createElement('span');
-    // bookmarkIcon.innerHTML = '<i class="far fa-bookmark"></i>';
-  
-    // postFooter.appendChild(likeIcon);
-    // postFooter.appendChild(commentIcon);
-    // postFooter.appendChild(shareIcon);
-    // postFooter.appendChild(bookmarkIcon);
-  
-    // const postStats = document.createElement('div');
-    // postStats.className = 'post-stats';
-  
-    // const likesCount = document.createElement('span');
-    // likesCount.textContent = '123 likes';
-  
-    const postCaption = document.createElement('span');
-    postCaption.textContent = caption;
-
-    postOverlayContent.appendChild(postCaption);
-  
-    // postStats.appendChild(likesCount);
-    // postStats.appendChild(postCaption);
-  
-    postElement.appendChild(postHeader);
-    postElement.appendChild(postImage);
+    postOverlay.className = 'description';
+    postOverlay.textContent = caption;
+    
+    postElement.appendChild(postThumbnail);
     postElement.appendChild(postOverlay);
-    // postElement.appendChild(postFooter);
-    // postElement.appendChild(postStats);
 
     postGridContainer.appendChild(postElement)
   
