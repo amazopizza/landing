@@ -8,7 +8,7 @@ import { fetchData, handleScroll } from './dataFetcher.js';
 renderHeader();
 
 // Render the navigation tabs
-renderNavTabs();
+// renderNavTabs();
 
 renderPostGrid();
 

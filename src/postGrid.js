@@ -4,7 +4,7 @@ export function renderPostGrid() {
     const postGridContainer = document.createElement("div");
 
     postGridContainer.setAttribute('id', "postGrid");
-    postGridContainer.className = "grid grid-cols-3 gap-4";
+    postGridContainer.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2";
 
     container.appendChild(postGridContainer);
   }
@@ -15,7 +15,7 @@ export function renderPostGrid() {
     const postGridContainer = document.getElementById('postGrid');
   
     const postElement = document.createElement('div');
-    postElement.className = 'post';
+    postElement.className = 'post rounded border border-grey-200 p-2';
   
     const postHeader = document.createElement('div');
     postHeader.className = 'post-header';
@@ -35,55 +35,57 @@ export function renderPostGrid() {
   
     const postOverlayContent = document.createElement('div');
   
-    const postLikes = document.createElement('span');
-    postLikes.innerHTML = '<i class="far fa-heart mr-2"></i> 123 likes';
+    // const postLikes = document.createElement('span');
+    // postLikes.innerHTML = '<i class="far fa-heart mr-2"></i> 123 likes';
   
-    const postComments = document.createElement('span');
-    postComments.innerHTML = '<i class="far fa-comment mr-2"></i> View all 10 comments';
+    // const postComments = document.createElement('span');
+    // postComments.innerHTML = '<i class="far fa-comment mr-2"></i> View all 10 comments';
   
-    postOverlayContent.appendChild(postLikes);
-    postOverlayContent.appendChild(document.createElement('br'));
-    postOverlayContent.appendChild(postComments);
+    // postOverlayContent.appendChild(postLikes);
+    // postOverlayContent.appendChild(document.createElement('br'));
+    // postOverlayContent.appendChild(postComments);
   
     postOverlay.appendChild(postOverlayContent);
   
-    const postFooter = document.createElement('div');
-    postFooter.className = 'post-footer';
+    // const postFooter = document.createElement('div');
+    // postFooter.className = 'post-footer';
   
-    const likeIcon = document.createElement('i');
-    likeIcon.className = 'far fa-heart';
+    // const likeIcon = document.createElement('i');
+    // likeIcon.className = 'far fa-heart';
   
-    const commentIcon = document.createElement('i');
-    commentIcon.className = 'far fa-comment';
+    // const commentIcon = document.createElement('i');
+    // commentIcon.className = 'far fa-comment';
   
-    const shareIcon = document.createElement('i');
-    shareIcon.className = 'far fa-paper-plane';
+    // const shareIcon = document.createElement('i');
+    // shareIcon.className = 'far fa-paper-plane';
   
-    const bookmarkIcon = document.createElement('span');
-    bookmarkIcon.innerHTML = '<i class="far fa-bookmark"></i>';
+    // const bookmarkIcon = document.createElement('span');
+    // bookmarkIcon.innerHTML = '<i class="far fa-bookmark"></i>';
   
-    postFooter.appendChild(likeIcon);
-    postFooter.appendChild(commentIcon);
-    postFooter.appendChild(shareIcon);
-    postFooter.appendChild(bookmarkIcon);
+    // postFooter.appendChild(likeIcon);
+    // postFooter.appendChild(commentIcon);
+    // postFooter.appendChild(shareIcon);
+    // postFooter.appendChild(bookmarkIcon);
   
-    const postStats = document.createElement('div');
-    postStats.className = 'post-stats';
+    // const postStats = document.createElement('div');
+    // postStats.className = 'post-stats';
   
-    const likesCount = document.createElement('span');
-    likesCount.textContent = '123 likes';
+    // const likesCount = document.createElement('span');
+    // likesCount.textContent = '123 likes';
   
     const postCaption = document.createElement('span');
     postCaption.textContent = caption;
+
+    postOverlayContent.appendChild(postCaption);
   
-    postStats.appendChild(likesCount);
-    postStats.appendChild(postCaption);
+    // postStats.appendChild(likesCount);
+    // postStats.appendChild(postCaption);
   
     postElement.appendChild(postHeader);
     postElement.appendChild(postImage);
     postElement.appendChild(postOverlay);
-    postElement.appendChild(postFooter);
-    postElement.appendChild(postStats);
+    // postElement.appendChild(postFooter);
+    // postElement.appendChild(postStats);
 
     postGridContainer.appendChild(postElement)
   
