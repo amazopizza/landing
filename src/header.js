@@ -13,9 +13,9 @@ export function renderHeader() {
     username.className = 'text-2xl font-bold';
     username.textContent = 'Ana C. Diaz (@amazng.store)';
   
-    const bio = document.createElement('p');
+    const bio = document.createElement('h2');
     bio.className = 'text-gray-600 my-2';
-    bio.textContent = '💡 Ingeniosos Productos ⭐ Calidad 🏡 Para el hogar';
+    bio.textContent = '🏡 Transforming homes with smart technology and cool gadgets ⭐ Shop our curated collection of innovative devices 💡 Genius Products';
   
     const linkBio = document.createElement('a');
     linkBio.href = "https://www.tiktok.com/@amazng.store";

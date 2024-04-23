@@ -23,7 +23,7 @@ export function renderPostGrid() {
     postThumbnail.src = thumbnail;
     postThumbnail.alt = 'Post Thumbnail';
   
-    const postOverlay = document.createElement('div');
+    const postOverlay = document.createElement('h3');
     postOverlay.className = 'description';
     postOverlay.textContent = caption;
     
